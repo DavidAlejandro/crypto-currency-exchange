@@ -6,7 +6,7 @@ export default function (state = [], action) {
 			let newState = action.newTradesData;
 			let priceExists = false;
 			let newStateCombined = [...state, ...newState];
-					//Sort form most recent to last order made.
+					//Sort from most recent to last order made.
 					newStateCombined.sort(function(a, b){
 					    return b.timestamp - a.timestamp;
 					});
@@ -15,15 +15,8 @@ export default function (state = [], action) {
 						newStateCombined.pop();
 					}
 
-					newStateCombined.map(function(trade){
-						// get milliseconds by multiplying it by 1000
-				      // let date = new Date(trade.timestamp*1000);
-				      // let hours = date.getHours();
-				      // let minutes = `0${date.getMinutes()}`;
-				      // let seconds = `0${date.getSeconds()}`;
-				      // let formattedTimestamp = (hours > 9 ? hours : `0${hours}`) + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+					newStateCombined.map(function(trade){				
 				      let now = moment().format('HH:mm:ss');
-				      // let formattedTimestamp = `${day.hours()}:${day.minutes()}:${day.seconds()}`
 				      trade.formattedTimestamp = now;
 
 					});
