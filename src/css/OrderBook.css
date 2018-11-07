@@ -1,0 +1,59 @@
+.bids-container{
+	position: relative;
+	padding-right: 1px;
+}
+
+.ticker-container{
+	display: inline-block;
+	padding: 10px;
+	background-color: #1b262d;
+	border-radius: 3px;
+}
+
+.ticker-container h3, .ticker-container p{
+	color: white;
+}
+
+.asks-container{
+	position: relative;
+	/*padding-left: 1px;*/
+}
+
+.table-responsive{
+	height: 925px !important;
+	overflow-y: hidden !important;
+}
+
+.bids-row{
+	position: relative;
+}
+
+.depth-bars-bids-container{
+	position: absolute;
+	top: 37px;
+	/*right: 1px;*/
+	height: 888px !important;
+	/*width: 100%;*/
+	background-color: rgba(82,108,46, 0.6); 
+}
+
+.buttons-container{
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttons-container button{
+	float: right !important;
+}
+
+tr.buy{
+	background-color: rgba(82,108,46, 0.3); 
+}
+
+tr.sell{
+	background-color: rgba(139,42,2, 0.3); 
+}
